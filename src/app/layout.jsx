@@ -1,7 +1,7 @@
 import Header from '@/components/Header'
-import './globals.css'
 import Providers from './Providers'
 import Navbar from '@/components/Navbar'
+import './globals.css'
 
 export const metadata = {
     title: 'IMDb',

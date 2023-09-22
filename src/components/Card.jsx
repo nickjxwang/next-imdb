@@ -15,13 +15,13 @@ export default function Card({ result }) {
         vote_count,
     } = result
     return (
-        <div className='cursor-pointer rounded-lg sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md sm:border sm:border-slate-400 sm:m-2 transition-shadow duration-200 group'>
+        <div className='max-w-lg mx-auto cursor-pointer rounded-lg sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md sm:border sm:border-slate-400 sm:m-2 transition-shadow duration-200 group'>
             <Link href={`/movie/${id}`}>
                 <Image
                     src={`https://image.tmdb.org/t/p/original/${
                         backdrop_path || poster_path
                     }`}
-                    width={500}
+                    width={600}
                     height={300}
                     alt='image is not available'
                     className='sm:rounded-t-lg group-hover:opacity-80 transition-opacity duration-200'
@@ -32,7 +32,7 @@ export default function Card({ result }) {
                     placeholder='blur'
                     blurDataURL='/spinner.svg'
                 ></Image>
-                <div className='p-2 space-y-2'>
+                <div className='p-3 space-y-2'>
                     <p className='line-clamp-3 text-base'>{overview}</p>
                     <h2 className='truncate text-lg font-bold'>
                         {title || name}
